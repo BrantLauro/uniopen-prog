@@ -205,6 +205,7 @@ article.active {
 .article-title {
   position: relative;
   padding-bottom: 7px;
+  margin-bottom: 15px;
 }
 
 .article-title::after {
@@ -255,10 +256,6 @@ article.active {
   z-index: -1;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #MAIN
 \*-----------------------------------*/
@@ -268,10 +265,6 @@ main {
   margin-bottom: 75px;
   min-width: 259px;
 }
-
-
-
-
 
 /*-----------------------------------*\
   #SIDEBAR
@@ -313,6 +306,7 @@ main {
   font-weight: var(--fw-500);
   letter-spacing: -0.25px;
   margin-bottom: 10px;
+  display: none;
 }
 
 .info-content .title {
@@ -324,7 +318,6 @@ main {
   padding: 3px 12px;
   border-radius: 8px;
 }
-
 
 /*-----------------------------------*\
   #NAVBAR
@@ -363,26 +356,18 @@ main {
 
 .navbar-link.active { color: var(--dark-blue-crayola); }
 
-
-
-
-
 /*-----------------------------------*\
   #sobre
 \*-----------------------------------*/
 
-.sobre .article-title { margin-bottom: 15px; }
-
-.sobre-text {
+.text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
 
-.sobre-text p { margin-bottom: 15px; }
-
-
+.text p { margin-bottom: 15px; }
 
 /**
  * #area 
@@ -392,13 +377,13 @@ main {
 
 .area-title { margin-bottom: 20px; }
 
-.area-list {
+.card-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.area-item {
+.card-item {
   position: relative;
   background: var(--border-gradient-onyx);
   padding: 20px;
@@ -407,7 +392,7 @@ main {
   z-index: 1;
 }
 
-.area-item::before {
+.card-item::before {
   content: "";
   position: absolute;
   inset: 1px;
@@ -416,15 +401,15 @@ main {
   z-index: -1;
 }
 
-.area-icon-box { margin-bottom: 10px; }
+.card-icon-box { margin-bottom: 10px; }
 
-.area-icon-box img { margin: auto; }
+.card-icon-box img { margin: auto; }
 
-.area-content-box { text-align: center; }
+.card-content-box { text-align: center; }
 
-.area-item-title { margin-bottom: 7px; }
+.card-item-title { margin-bottom: 7px; }
 
-.area-item-text {
+.card-item-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
@@ -632,7 +617,6 @@ main {
 
 .techs-item img:hover { filter: grayscale(0); }
 
-.article-title { margin-bottom: 30px; }
 
 /*-----------------------------------*\
   #RESPONSIVE
@@ -692,6 +676,7 @@ main {
   .article-title {
     font-weight: var(--fw-600);
     padding-bottom: 15px;
+    margin-bottom: 15px;
   }
 
   .article-title::after {
@@ -752,11 +737,11 @@ main {
 
   .sobre .article-title { margin-bottom: 20px; }
 
-  .sobre-text { margin-bottom: 40px; }
+  .text { margin-bottom: 40px; }
 
   /* area */
 
-  .area-item {
+  .card-item {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -764,12 +749,12 @@ main {
     padding: 30px;
   }
 
-  .area-icon-box {
+  .card-icon-box {
     margin-bottom: 0;
     margin-top: 5px;
   }
 
-  .area-content-box { text-align: left; }
+  .card-content-box { text-align: left; }
 
   /* depoimentos */
 
@@ -861,6 +846,11 @@ main {
 
   .sidebar, article { width: 700px; }
 
+  .footer-txt {
+    display: block;
+  }
+
+
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
   /**
@@ -868,6 +858,7 @@ main {
    */
 
   .navbar-link { --fs-8: 15px; }
+
 
   /**
    * sobre
@@ -956,7 +947,7 @@ main {
 
   /* area */
 
-  .area-list {
+  .card-list {
     grid-template-columns: 1fr 1fr;
     gap: 20px 25px;
   }
