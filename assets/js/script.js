@@ -14,6 +14,7 @@ const overlay = document.querySelector("[data-overlay]");
 // modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
+const modalDesc = document.querySelector("[data-modal-desc]");
 const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
@@ -30,6 +31,7 @@ for (let i = 0; i < depoimentosItem.length; i++) {
     modalImg.src = this.querySelector("[data-depoimentos-avatar]").src;
     modalImg.alt = this.querySelector("[data-depoimentos-avatar]").alt;
     modalTitle.innerHTML = this.querySelector("[data-depoimentos-title]").innerHTML;
+    modalDesc.innerHTML = this.querySelector("[data-depoimentos-desc]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-depoimentos-text]").innerHTML;
 
     depoimentosModalFunc();
