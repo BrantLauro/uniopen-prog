@@ -417,6 +417,21 @@ main {
   line-height: 1.6;
 }
 
+.responsive-image {
+  width: 100%;
+  max-width: 810px;
+  margin-left: 10px;
+  border-radius: 20px;
+  object-fit: fill;
+}
+
+/* Ajustes adicionais para telas menores */
+@media (max-width: 600px) {
+  .responsive-image {
+      margin-left: 0; /* Remover margem em telas menores */
+      border-radius: 10px; /* Ajustar a borda para ficar mais proporcional */
+  }
+}
 
 /**
  * #depoimentos 
