@@ -617,6 +617,11 @@ main {
 
 .techs-item img:hover { filter: grayscale(0); }
 
+.list-des-van > li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
 
 /*-----------------------------------*\
   #RESPONSIVE
