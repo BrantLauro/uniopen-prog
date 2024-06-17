@@ -626,7 +626,7 @@ main {
 }
 
 .techs-item {
-  min-width: 50%;
+  min-width: 5%;
   scroll-snap-align: start;
 }
 
